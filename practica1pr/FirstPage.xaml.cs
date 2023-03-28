@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using practica1pr.AORUSDataSetTableAdapters;
+using System.Data;
 
 namespace practica1pr
 {
@@ -32,8 +34,8 @@ namespace practica1pr
 
         private void ThreePage_Click(object sender, RoutedEventArgs e)
         {
-            color.InsertQuery(ColorTextBox.Text);
-            ColorDataGrid.ItemsSource = color.GetData();    
+            object id = (ColorDataGrid.SelectedItem as DataRowView).Row[0];
+            color.DeleteQuery(Convert.ToInt32(id));
         }
     }
 }

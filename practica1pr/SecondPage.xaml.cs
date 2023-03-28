@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using practica1pr.AORUSDataSetTableAdapters;
+using System.Data;
 
 namespace practica1pr
 {
@@ -30,8 +32,8 @@ namespace practica1pr
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            pictures.InsertQuery(PaintPictures.Text);
-            ColorDataGrid.ItemsSource = pictures.GetData();
+            object picures = (ColorDataGrid.SelectedItem as DataRowView).Row[0];
+            pictures.DeleteQuery(Convert.ToInt32(picures));
             
         }
     }
