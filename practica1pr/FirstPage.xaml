@@ -9,7 +9,9 @@
       Title="FirstPage">
 
     <Grid>
-        <DataGrid x:Name="ColorDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        
+        <DataGrid x:Name="ColorDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,99"/>
+        <Button x:Name="ThreePage" Content="Добавить стиль" HorizontalAlignment="Left" Margin="400,397,0,0" VerticalAlignment="Top" Width="400" Click="ThreePage_Click" Height="43"/>
+        <TextBox x:Name="ColorTextBox" HorizontalAlignment="Left" Margin="0,398,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="395" Height="42"/>
+
     </Grid>
 </Page>

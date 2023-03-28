@@ -27,6 +27,13 @@ namespace practica1pr
             InitializeComponent();
             ColorDataGrid.ItemsSource = color.GetData();
             ColorDataGrid.DisplayMemberPath = "color_name";
+            
+        }
+
+        private void ThreePage_Click(object sender, RoutedEventArgs e)
+        {
+            color.InsertQuery(ColorTextBox.Text);
+            ColorDataGrid.ItemsSource = color.GetData();    
         }
     }
 }

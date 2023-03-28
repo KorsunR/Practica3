@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace practica1pr
 {
-    /// <summary>
-    /// Логика взаимодействия для SecondPage.xaml
-    /// </summary>
+    
     public partial class SecondPage : Page
     {
         PickturesTableAdapter pictures = new PickturesTableAdapter();
@@ -27,6 +25,14 @@ namespace practica1pr
             InitializeComponent();
             ColorDataGrid.ItemsSource = pictures.GetData();
             ColorDataGrid.DisplayMemberPath = "picktures_name";
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            pictures.InsertQuery(PaintPictures.Text);
+            ColorDataGrid.ItemsSource = pictures.GetData();
+            
         }
     }
 }

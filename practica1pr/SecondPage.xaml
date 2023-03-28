@@ -9,6 +9,8 @@
       Title="SecondPage">
 
     <Grid>
-        <DataGrid x:Name="ColorDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <DataGrid x:Name="ColorDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,51"/>
+        <Button x:Name="FourPage" Content="Добавить Вид Краски" HorizontalAlignment="Left" Margin="425,399,0,0" VerticalAlignment="Top" Click="Button_Click" Width="375" Height="51"/>
+        <TextBox x:Name="PaintPictures" HorizontalAlignment="Left" Margin="10,404,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="410" Height="46"/>
     </Grid>
 </Page>
